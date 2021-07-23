@@ -1,0 +1,23 @@
+﻿@using XUnitTutorial.API.Models
+@model List<Product>  
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+ <hr />
+ <ul class="list-group">
+     <li class="list-group-item active" aria-current="true">Products</li>
+
+     @{
+         foreach (var item in Model)
+         {
+             <li class="list-group-item">@item.Id) @item.Name</li>
+         }
+     }
+ </ul>
+ 
